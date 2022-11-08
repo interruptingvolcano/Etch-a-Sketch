@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+div .box {
+  border: solid black 1px;
+  aspect-ratio: 1 / 1;
+  flex-basis: 6%;
+  margin: auto;
+
+}
+
+
+
+.coloring {
+  background-color: aqua;
+}
+
+
+
