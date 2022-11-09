@@ -49,7 +49,7 @@ function clickNew(e) {
       for (i = 1; i <= numSquared; i++) {
         const gridSqr = document.createElement('div');
 
-        gridSqr.classList.add('box');
+        gridSqr.classList.add('newBox');
         newContainer.appendChild(gridSqr);
         gridSqr.addEventListener('mouseover', () => {
           gridSqr.classList.add('coloring');
