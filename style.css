@@ -9,6 +9,7 @@
 
 }
 
+
 div .box {
   border: solid black 1px;
   aspect-ratio: 1 / 1;
@@ -17,10 +18,17 @@ div .box {
 
 }
 
-
-
 .coloring {
   background-color: aqua;
+}
+
+
+
+.newGrid {
+  font-size: 36px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: mistyrose;
+  margin-bottom: 15px;
 }
 
 
