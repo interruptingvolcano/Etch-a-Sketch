@@ -1,74 +1,146 @@
-const button = document.querySelector('button');
-button.classList.add('newGrid');
+let click = true;
 
-const container = document.querySelector('div');
+//add divs
+
+let body = document.querySelector('body');
+
+let container = document.createElement('div');
+container.classList.add('flex-container');
+body.appendChild(container);
+let title = document.createElement('div');
+title.classList.add('title');
+container.appendChild(title);
+let heading = document.createElement('h1');
+heading.textContent = 'Sketchy-Sketch';
+title.appendChild(heading);
+let content = document.createElement('div');
+content.classList.add('content')
+container.appendChild(content);
+let board = document.createElement('div');
+board.classList.add('board')
+content.appendChild(board);
+
+//add buttons
+let black = document.createElement('button');
+black.classList.add('black');
+black.textContent = 'Black'
+content.appendChild(black);
+
+let white = document.createElement('button');
+white.classList.add('white');
+white.textContent = 'White';
+content.appendChild(white);
+
+let eraser = document.createElement('button');
+eraser.classList.add('eraser');
+eraser.textContent = 'Eraser';
+content.appendChild(eraser);
+
+let random = document.createElement('button');
+random.classList.add('random');
+random.textContent = 'Random';
+content.appendChild(random);
+
+let reset = document.createElement('button');
+reset.classList.add('reset');
+reset.textContent = 'Reset';
+content.appendChild(reset);
+
+let setSize = document.createElement('button');
+setSize.classList.add('setSize');
+setSize.textContent = 'Set Size';
+container.appendChild(setSize);
+
+let input = document.createElement('input');
+input.classList.add('input');
+input.setAttribute('type', 'text')
+input.setAttribute('placeholder', 'Set size of grid');
+input.setAttribute('value', '16');
+container.appendChild(input);
 
 
-for (i = 1; i <= 256; i++) {
-const gridSqr = document.createElement('div');
-gridSqr.classList.add('box');
-container.appendChild(gridSqr);
-gridSqr.addEventListener('mouseover', () => {
-  gridSqr.classList.add('coloring');
 
-})
-};
+//create Board
+let color = 'blue';
 
-let val = 0;
+function createBoard(size) {
+  if (size >= 2 && size <= 100) {
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    let squares = board.querySelectorAll('div');
+    squares.forEach((div) => div.remove());
 
+    amount = size * size;
 
-
-
-function clickNew(e) {
-
-  const userNum = Number(prompt('Enter the number of squares you\'d like per side of your new grid.'));
-  numSquared = userNum * userNum;
-  
-  const body = document.querySelector('body'); 
-  let newContainer = document.createElement('div');
-  newContainer = document.querySelector('div');
-  body.appendChild(newContainer);
-
-  console.log(val);
-  if (val === 0) {
-    const container = document.querySelector('.container');
-    container.remove();
-
-  } else if (val >= 1) {
-    newContainer = document.querySelector('.container');
-    newContainer.remove();
+    for (let i = 0; i < amount; i++) {
+      let square = document.createElement('div');
+      square.style.backgroundColor = 'whitesmoke';
+      board.appendChild(square);
+      square.addEventListener('mouseover', colorSquare);
+    }
+  } else if (size < 2) {
+    input.value = 'size is too small!'
+  } else if (size > 100) {
+    input.value = 'size is too large!'
   }
-  
-    if (userNum < 100) {
-      
-      const body = document.querySelector('body');
-      const newContainer = document.createElement('div');
-      newContainer.classList.add('container');
-      body.appendChild(newContainer);
 
-      for (i = 1; i <= numSquared; i++) {
-        const gridSqr = document.createElement('div');
 
-        gridSqr.classList.add('newBox');
-        newContainer.appendChild(gridSqr);
-        gridSqr.addEventListener('mouseover', () => {
-          gridSqr.classList.add('coloring');
-        })
-        };
-    } else if (userNum >= 100) {
-      const body = document.querySelector('body');
-      const newContainer = document.createElement('div');
-      newContainer.classList.add('container');
-      body.appendChild(newContainer);
-    
-  };
-    val += 1;
+}
+ createBoard(16);
 
-  return e;
-  
+function colorSquare() {
+  if (click === true) {
+    if (color === 'random') {
+      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    this.style.backgroundColor = color;
+  }
+}
+
+function changeColor(choice) {
+  color = choice;
+}
+
+function changeSize(input) {
+  createBoard(input);
   
 }
-button.addEventListener('click', clickNew)
+
+setSize.addEventListener('click', ()=> {changeSize(input.value)});
+
+black.addEventListener('click', ()=> {
+  changeColor('black');
+});
+
+white.addEventListener('click', ()=> {
+  changeColor('white');
+});
+
+eraser.addEventListener('click', ()=> {
+  changeColor('gray');
+});
+
+random.addEventListener('click', ()=> {
+  changeColor('random');
+});
+
+reset.addEventListener('click', ()=> {
+  location.reload();
+});
+
+let colorToggle = document.createElement('div');
+colorToggle.classList.add('colorToggle');
+title.appendChild(colorToggle);
+colorToggle.textContent = 'Ready to color!'
+body.addEventListener('click', ()=> {
+  click = !click;
+  if (click === true) {
+    colorToggle.textContent = 'Ready to color!'
+  } else if (click === false) {
+    colorToggle.textContent = 'Click anywhere to turn coloring on.'
+  }
+});
+
 
 
 

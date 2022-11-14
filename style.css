@@ -1,48 +1,65 @@
-* {
-  box-sizing: border-box;
-}
-
-.container {
+body {
+  font-family: 'poppins';
+  color: white;
+  background-image: url(/images/wood.jpeg);
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
+  justify-content: center;
+  
 }
 
-.newContainer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+button {
+  
+  border-radius: 50%;
+  font-size: 25px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 800;
+  background-color: rgb(231, 211, 138);
 }
 
-
-div .box {
-  border: solid black 1px;
-  aspect-ratio: 1 / 1;
-  flex-basis: 6%;
-  margin: auto;
-
-}
-
-div .newBox {
-  border: solid black 1px;
-  aspect-ratio: 1 / 1;
-  flex-basis: 25%;
-  margin: auto;
-}
-
-.coloring {
-  background-color: aqua;
+.black {
+  margin-left: 55px;
 }
 
 
+h1 {
+  font-size: 75px;
+  color: rgb(231, 211, 138);
+  font-family:'Courier New', Courier, monospace;
+  margin-bottom: -10px;
+  
+}
 
-.newGrid {
-  font-size: 36px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.board {
+
+  width: 620px;
+  height: 620px;
+  border: solid mistyrose 5px;
+  display: grid;
+  
+} 
+
+.colorToggle {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: 800;
+
+}
+
+.setSize {
+  
+  margin-left: 180px;
+  font-size: 30px;
+}
+
+input {
+  width: 65px;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 30px;
   background-color: mistyrose;
-  margin-bottom: 15px;
+ 
 }
-
 
 
