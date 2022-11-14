@@ -1,7 +1,8 @@
 body {
+  margin: 0px;
   font-family: 'poppins';
   color: white;
-  background-image: url(/images/wood.jpeg);
+  background-color: rgb(169, 172, 208);
   display: flex;
   justify-content: center;
   
@@ -10,13 +11,13 @@ body {
 button {
   margin: 10px;
   margin-bottom: -10px;
-  border-radius: 80%;
-  font-size: 25px;
+  /* border-radius: 100%; */
+  font-size: 20px;
   font-family:'Courier New', Courier, monospace;
   font-weight: 800;
-  background-color: black;
+  background-color: rgb(5, 30, 39);
   color: mistyrose;
-  text-shadow: 2px 2px #ff0000;
+  
 
 }
 
@@ -25,22 +26,24 @@ button {
 }
 
 
-h1 {
-  font-size: 75px;
-  color: rgb(218, 137, 50);
-  text-shadow: 2px 2px #ff0000;
-  font-family:'Courier New', Courier, monospace;
-  margin-bottom: -20px;
-  margin-top: -10px;
+.title {
+  font-size: 50px;
+  box-shadow: 20px rgb(216, 179, 179);
+  font-family: 'poppins';
+  font-style: italic;
+ 
   
 }
+
+
 
 .board {
 
   width: 620px;
   height: 620px;
-  border: solid #e0a6a6 5px;
+  border: solid #21031e 5px;
   display: grid;
+ 
   
 } 
 
@@ -58,10 +61,11 @@ h1 {
   
   margin-left: 180px;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 input {
-  width: 65px;
+  width: 330px;
   font-family:'Courier New', Courier, monospace;
   font-weight: 800;
   font-size: 30px;
@@ -69,25 +73,7 @@ input {
  
 }
 
-.black {
-  padding: 5px;
-}
 
-.gray {
-  padding: 5px;
-}
-
-.eraser {
-  padding: 10px;
-}
-
-.random {
-  padding: 5px;
-}
-
-.reset {
-  padding: 20px;
-}
 
 
 

@@ -11,7 +11,7 @@ let title = document.createElement('div');
 title.classList.add('title');
 container.appendChild(title);
 let heading = document.createElement('h1');
-heading.textContent = 'Sketchy-Sketch';
+heading.textContent = 'Sketchy';
 title.appendChild(heading);
 let content = document.createElement('div');
 content.classList.add('content')
@@ -55,9 +55,8 @@ let input = document.createElement('input');
 input.classList.add('input');
 input.setAttribute('type', 'text')
 input.setAttribute('placeholder', 'Set size of grid');
-input.setAttribute('value', '16');
+// input.setAttribute('value', '16');
 container.appendChild(input);
-
 
 
 //create Board
@@ -74,7 +73,7 @@ function createBoard(size) {
 
     for (let i = 0; i < amount; i++) {
       let square = document.createElement('div');
-      square.style.backgroundColor = 'whitesmoke';
+      square.style.backgroundColor = 'white';
       board.appendChild(square);
       square.addEventListener('mouseover', colorSquare);
     }
@@ -132,14 +131,20 @@ let colorToggle = document.createElement('div');
 colorToggle.classList.add('colorToggle');
 title.appendChild(colorToggle);
 colorToggle.textContent = 'Ready to color!'
-body.addEventListener('click', ()=> {
+body.addEventListener('click', (e)=> {
+  if (e.target.tagName !== 'BUTTON') {
   click = !click;
-  if (click === true) {
-    colorToggle.textContent = 'Ready to color!'
-  } else if (click === false) {
-    colorToggle.textContent = 'Click anywhere to turn coloring on.'
-  }
+    if (click) {
+      colorToggle.textContent = 'Ready to color!'
+    } else {
+      colorToggle.textContent = 'Click anywhere to turn coloring on.'
+
+    }
+}
 });
+
+document.body.style.backgroundImage = 'url(images/color_grid.png)';
+
 
 
 
