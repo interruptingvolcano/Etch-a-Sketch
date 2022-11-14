@@ -26,10 +26,10 @@ black.classList.add('black');
 black.textContent = 'Black'
 content.appendChild(black);
 
-let white = document.createElement('button');
-white.classList.add('white');
-white.textContent = 'White';
-content.appendChild(white);
+let gray = document.createElement('button');
+gray.classList.add('gray');
+gray.textContent = 'Gray';
+content.appendChild(gray);
 
 let eraser = document.createElement('button');
 eraser.classList.add('eraser');
@@ -112,12 +112,12 @@ black.addEventListener('click', ()=> {
   changeColor('black');
 });
 
-white.addEventListener('click', ()=> {
-  changeColor('white');
+gray.addEventListener('click', ()=> {
+  changeColor('gray');
 });
 
 eraser.addEventListener('click', ()=> {
-  changeColor('gray');
+  changeColor('white');
 });
 
 random.addEventListener('click', ()=> {
