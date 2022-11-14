@@ -1,11 +1,15 @@
 body {
-  margin: 0px;
+  margin: 10px;
   font-family: 'poppins';
   color: white;
   background-color: rgb(169, 172, 208);
   display: flex;
   justify-content: center;
   
+}
+
+.content {
+  display: block;
 }
 
 button {
@@ -18,33 +22,35 @@ button {
   background-color: rgb(5, 30, 39);
   color: mistyrose;
   
-
 }
 
-.random {
-  margin-right: 80px;
+.eraser {
+  margin-right: 120px;
 }
 
 
 .title {
-  font-size: 50px;
-  box-shadow: 20px rgb(216, 179, 179);
+  font-size: 30px;
   font-family: 'poppins';
   font-style: italic;
- 
+  text-align: left;
   
 }
 
-
+h1 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px white;
+  box-shadow: 2px 2px 2px black;
+}
 
 .board {
 
-  width: 620px;
-  height: 620px;
-  border: solid #21031e 5px;
+  width: 650px;
+  height: 650px;
+  border: solid #21031e 10px;
   display: grid;
  
-  
+
 } 
 
 .colorToggle {
@@ -52,25 +58,52 @@ button {
   text-align: center;
   font-family:'Courier New', Courier, monospace;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 900;
   color: mistyrose;
+  margin-top: 10px;
 
 }
 
 .setSize {
   
-  margin-left: 180px;
-  font-size: 30px;
-  margin-bottom: 20px;
+  margin-left: 130px;
+  font-size: 20px;
+  
+  margin-bottom: 8px;
 }
 
 input {
-  width: 330px;
+  
   font-family:'Courier New', Courier, monospace;
   font-weight: 800;
-  font-size: 30px;
   background-color: mistyrose;
- 
+  
+}
+
+.black {
+  height: 35px;
+}
+
+.gray {
+  height: 35px;
+}
+
+.eraser {
+  height: 35px;
+}
+
+.random {
+  height: 35px;
+}
+
+.reset {
+  height: 35px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 600;
 }
 
 

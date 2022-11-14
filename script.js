@@ -12,7 +12,23 @@ title.classList.add('title');
 container.appendChild(title);
 let heading = document.createElement('h1');
 heading.textContent = 'Sketchy';
+
 title.appendChild(heading);
+
+//add input box and button
+let setSize = document.createElement('button');
+setSize.classList.add('setSize');
+setSize.textContent = 'set size';
+container.appendChild(setSize);
+
+let input = document.createElement('input');
+input.classList.add('input');
+input.setAttribute('type', 'text')
+input.setAttribute('placeholder', '# squares per side');
+// input.setAttribute('value', '16');
+container.appendChild(input);
+
+
 let content = document.createElement('div');
 content.classList.add('content')
 container.appendChild(content);
@@ -23,40 +39,35 @@ content.appendChild(board);
 //add buttons
 let black = document.createElement('button');
 black.classList.add('black');
-black.textContent = 'Black'
+black.textContent = 'black'
 content.appendChild(black);
 
 let gray = document.createElement('button');
 gray.classList.add('gray');
-gray.textContent = 'Gray';
+gray.textContent = 'gray';
 content.appendChild(gray);
-
-let eraser = document.createElement('button');
-eraser.classList.add('eraser');
-eraser.textContent = 'Eraser';
-content.appendChild(eraser);
 
 let random = document.createElement('button');
 random.classList.add('random');
-random.textContent = 'Random';
+random.textContent = 'random';
 content.appendChild(random);
+
+let eraser = document.createElement('button');
+eraser.classList.add('eraser');
+eraser.textContent = 'eraser';
+content.appendChild(eraser);
+
+
 
 let reset = document.createElement('button');
 reset.classList.add('reset');
-reset.textContent = 'Reset';
+reset.textContent = 'clear';
 content.appendChild(reset);
 
-let setSize = document.createElement('button');
-setSize.classList.add('setSize');
-setSize.textContent = 'Set Size';
-container.appendChild(setSize);
+let footer = document.createElement('footer');
+footer.textContent = '2022 © interruptingvolcano via Odin Project';
+content.appendChild(footer);
 
-let input = document.createElement('input');
-input.classList.add('input');
-input.setAttribute('type', 'text')
-input.setAttribute('placeholder', 'Set size of grid');
-// input.setAttribute('value', '16');
-container.appendChild(input);
 
 
 //create Board
@@ -143,7 +154,7 @@ body.addEventListener('click', (e)=> {
 }
 });
 
-document.body.style.backgroundImage = 'url(images/color_grid.png)';
+
 
 
 
