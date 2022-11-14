@@ -28,6 +28,12 @@ input.setAttribute('placeholder', '# squares per side');
 // input.setAttribute('value', '16');
 container.appendChild(input);
 
+let reset = document.createElement('button');
+reset.classList.add('reset');
+reset.textContent = 'clear';
+container.appendChild(reset);
+
+
 
 let content = document.createElement('div');
 content.classList.add('content')
@@ -42,10 +48,20 @@ black.classList.add('black');
 black.textContent = 'black'
 content.appendChild(black);
 
-let gray = document.createElement('button');
-gray.classList.add('gray');
-gray.textContent = 'gray';
-content.appendChild(gray);
+let blue = document.createElement('button');
+blue.classList.add('blue');
+blue.textContent = 'blue';
+content.appendChild(blue);
+
+let red = document.createElement('button');
+red.classList.add('red');
+red.textContent = 'red';
+content.appendChild(red);
+
+let green = document.createElement('button');
+green.classList.add('green');
+green.textContent = 'green';
+content.appendChild(green);
 
 let random = document.createElement('button');
 random.classList.add('random');
@@ -57,21 +73,13 @@ eraser.classList.add('eraser');
 eraser.textContent = 'eraser';
 content.appendChild(eraser);
 
-
-
-let reset = document.createElement('button');
-reset.classList.add('reset');
-reset.textContent = 'clear';
-content.appendChild(reset);
-
 let footer = document.createElement('footer');
 footer.textContent = '2022 © interruptingvolcano via Odin Project';
 content.appendChild(footer);
 
 
-
 //create Board
-let color = 'blue';
+let color = 'gray';
 
 function createBoard(size) {
   if (size >= 2 && size <= 100) {
@@ -116,39 +124,89 @@ function changeSize(input) {
   
 }
 
-setSize.addEventListener('click', ()=> {changeSize(input.value)});
+setSize.addEventListener('click', ()=>  {changeSize(input.value)});
 
 black.addEventListener('click', ()=> {
   changeColor('black');
+  black.style.color = 'gray';
+  blue.style.color = 'white';
+  red.style.color = 'white';
+  green.style.color = 'white';
+  random.style.color = 'white';
+  eraser.style.color = 'white';
+
 });
 
-gray.addEventListener('click', ()=> {
-  changeColor('gray');
+blue.addEventListener('click', ()=> {
+  changeColor('blue');
+  blue.style.color = '#92b4eb';
+  black.style.color = 'white';
+  red.style.color = 'white';
+  green.style.color = 'white';
+  random.style.color = 'white';
+  eraser.style.color = 'white';
+
+});
+
+red.addEventListener('click', ()=> {
+  changeColor('red');
+  red.style.color = 'red';
+  black.style.color = 'white';
+  blue.style.color = 'white';
+  green.style.color = 'white';
+  random.style.color = 'white';
+  eraser.style.color = 'white';
+
+});
+
+green.addEventListener('click', ()=> {
+  changeColor('green');
+  green.style.color = 'green';
+  black.style.color = 'white';
+  blue.style.color = 'white';
+  red.style.color = 'white';
+  random.style.color = 'white';
+  eraser.style.color = 'white';
+
 });
 
 eraser.addEventListener('click', ()=> {
   changeColor('white');
+  eraser.style.color = 'mistyrose';
+  black.style.color = 'white';
+  blue.style.color = 'white';
+  red.style.color = 'white';
+  green.style.color = 'white';
+  random.style.color = 'white';
 });
 
 random.addEventListener('click', ()=> {
   changeColor('random');
+  random.style.color = 'yellow';
+  black.style.color = 'white';
+  blue.style.color = 'white';
+  red.style.color = 'white';
+  green.style.color = 'white';
+  eraser.style.color = 'white';
+
 });
 
 reset.addEventListener('click', ()=> {
   location.reload();
+ 
 });
 
 let colorToggle = document.createElement('div');
 colorToggle.classList.add('colorToggle');
 title.appendChild(colorToggle);
-colorToggle.textContent = 'Ready to color!'
+colorToggle.textContent = 'Ready to draw!'
 body.addEventListener('click', (e)=> {
   if (e.target.tagName !== 'BUTTON') {
   click = !click;
     if (click) {
-      colorToggle.textContent = 'Ready to color!'
+      colorToggle.textContent = 'Ready to draw!'
     } else {
-      colorToggle.textContent = 'Click anywhere to turn coloring on.'
+      colorToggle.textContent = 'Click anywhere to start drawing.'
 
     }
 }

@@ -20,7 +20,7 @@ button {
   font-family:'Courier New', Courier, monospace;
   font-weight: 800;
   background-color: rgb(5, 30, 39);
-  color: mistyrose;
+  color: white;
   
 }
 
@@ -30,17 +30,22 @@ button {
 
 
 .title {
-  font-size: 30px;
+  font-size: 34px;
   font-family: 'poppins';
   font-style: italic;
   text-align: left;
+  margin-top: -10px;
+  margin-right: 60px;
+  margin-left: -10px;
+  
   
 }
 
 h1 {
   color: whitesmoke;
-  text-shadow: 2px 2px 2px white;
-  box-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px mistyrose;
+  box-shadow: 3px 3px 3px black;
+  
 }
 
 .board {
@@ -55,18 +60,20 @@ h1 {
 
 .colorToggle {
   
-  text-align: center;
+  
   font-family:'Courier New', Courier, monospace;
   font-size: 24px;
   font-weight: 900;
   color: mistyrose;
   margin-top: 10px;
+  margin-left: 60px;
+
 
 }
 
 .setSize {
   
-  margin-left: 130px;
+  margin-left: 50px;
   font-size: 20px;
   
   margin-bottom: 8px;
@@ -77,14 +84,24 @@ input {
   font-family:'Courier New', Courier, monospace;
   font-weight: 800;
   background-color: mistyrose;
+  margin-right: 130px;
   
+}
+
+input::placeholder {
+  color: red;
+}
+
+input {
+  color: red
 }
 
 .black {
   height: 35px;
+  margin-left: 48px;
 }
 
-.gray {
+.blue {
   height: 35px;
 }
 
@@ -101,8 +118,8 @@ input {
 }
 
 footer {
-  text-align: center;
-  margin-top: 40px;
+  margin-left: 140px;
+  margin-top: 30px;
   font-weight: 600;
 }
 
