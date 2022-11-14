@@ -191,28 +191,28 @@ random.addEventListener('click', ()=> {
 
 });
 
-reset.addEventListener('click', ()=> {
-  location.reload();
- 
-});
+
 
 let colorToggle = document.createElement('div');
 colorToggle.classList.add('colorToggle');
 title.appendChild(colorToggle);
-colorToggle.textContent = 'Ready to draw!'
+colorToggle.textContent = 'Ready to draw. Click anywhere to stop.'
 body.addEventListener('click', (e)=> {
   if (e.target.tagName !== 'BUTTON') {
   click = !click;
     if (click) {
-      colorToggle.textContent = 'Ready to draw!'
+      colorToggle.textContent = 'Ready to draw. Click anywhere to stop.'
     } else {
-      colorToggle.textContent = 'Click anywhere to start drawing.'
+      colorToggle.textContent = 'Drawing stopped. Click anywhere to start.'
 
     }
 }
 });
 
-
+reset.addEventListener('click', ()=> {
+  location.reload();
+  
+});
 
 
 
