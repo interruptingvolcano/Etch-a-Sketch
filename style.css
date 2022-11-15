@@ -119,7 +119,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   body {
     display: flex;
     flex-direction: column;
@@ -134,12 +134,12 @@ footer {
   }
 
   .board {
-    max-width: 460px;
-    max-height: 460px;
+    max-width: 400px;
+    max-height: 400px;
   }
 
   .title {
-    margin-top: -50px;
+    margin-top: 50px;
     margin-left: 10px;
     
   }
