@@ -169,6 +169,7 @@ footer {
 
   .topMenu {
     display: flex;
+    max-width: 400px;
   }
 
   .colorToggle {
@@ -178,6 +179,7 @@ footer {
 
   .buttons {
     display: flex;
+    max-width: 400px;
 
   }
 
