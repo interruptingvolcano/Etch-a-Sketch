@@ -185,28 +185,36 @@ footer {
   .buttons {
     display: flex;
     max-width: 400px;
-
   }
 
   .black {
     font-size: 12px;
-    margin-left: 4px;
+    margin-left: 30px;
+    margin-right: -10px;
   }
 
   .blue {
     font-size: 12px;
+    margin-right: -10px;
+
   }
 
   .red {
     font-size: 12px;
+    margin-right: -10px;
+
   }
 
   .green {
     font-size: 12px;
+    margin-right: -10px;
+
   }
 
   .random {
     font-size: 12px;
+    margin-right: -10px;
+
   }
 
   .eraser {
