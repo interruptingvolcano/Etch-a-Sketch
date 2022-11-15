@@ -123,6 +123,8 @@ footer {
   body {
     display: flex;
     flex-direction: column;
+
+    margin: 20px;
     
   }
 
@@ -132,8 +134,8 @@ footer {
   }
 
   .board {
-    max-width: 480px;
-    max-height: 480px;
+    max-width: 460px;
+    max-height: 460px;
   }
 
   .title {
