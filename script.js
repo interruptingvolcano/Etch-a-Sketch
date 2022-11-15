@@ -11,7 +11,7 @@ let title = document.createElement('div');
 title.classList.add('title');
 container.appendChild(title);
 let heading = document.createElement('h1');
-heading.textContent = 'Sketchy';
+heading.textContent = 'Sketchie';
 
 title.appendChild(heading);
 
