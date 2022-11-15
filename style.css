@@ -124,8 +124,16 @@ footer {
 }
 
 
-@media (max-width: 760px) {
-  
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 
