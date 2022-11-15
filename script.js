@@ -16,22 +16,27 @@ heading.textContent = 'Sketchie';
 title.appendChild(heading);
 
 //add input box and button
+
+let topMenu = document.createElement('div');
+topMenu.classList.add('topMenu');
+container.appendChild(topMenu);
+
 let setSize = document.createElement('button');
 setSize.classList.add('setSize');
 setSize.textContent = 'set size';
-container.appendChild(setSize);
+topMenu.appendChild(setSize);
 
 let input = document.createElement('input');
 input.classList.add('input');
 input.setAttribute('type', 'text')
 input.setAttribute('placeholder', '# squares per side');
 // input.setAttribute('value', '16');
-container.appendChild(input);
+topMenu.appendChild(input);
 
 let reset = document.createElement('button');
 reset.classList.add('reset');
 reset.textContent = 'clear';
-container.appendChild(reset);
+topMenu.appendChild(reset);
 
 
 
@@ -43,35 +48,40 @@ board.classList.add('board')
 content.appendChild(board);
 
 //add buttons
+
+let buttons = document.createElement('div');
+buttons.classList.add('buttons');
+content.appendChild(buttons);
+
 let black = document.createElement('button');
 black.classList.add('black');
 black.textContent = 'black'
-content.appendChild(black);
+buttons.appendChild(black);
 
 let blue = document.createElement('button');
 blue.classList.add('blue');
 blue.textContent = 'blue';
-content.appendChild(blue);
+buttons.appendChild(blue);
 
 let red = document.createElement('button');
 red.classList.add('red');
 red.textContent = 'red';
-content.appendChild(red);
+buttons.appendChild(red);
 
 let green = document.createElement('button');
 green.classList.add('green');
 green.textContent = 'green';
-content.appendChild(green);
+buttons.appendChild(green);
 
 let random = document.createElement('button');
 random.classList.add('random');
 random.textContent = 'random';
-content.appendChild(random);
+buttons.appendChild(random);
 
 let eraser = document.createElement('button');
 eraser.classList.add('eraser');
 eraser.textContent = 'eraser';
-content.appendChild(eraser);
+buttons.appendChild(eraser);
 
 let footer = document.createElement('footer');
 footer.textContent = '2022 © interruptingvolcano via Odin Project';
